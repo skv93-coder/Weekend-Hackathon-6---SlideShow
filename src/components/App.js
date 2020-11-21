@@ -4,7 +4,7 @@ import '../styles/App.css';
 
 const App = (props) => {
   const {slides}=props;
-  const [slidesarr,setslidesarr]=useState(1);
+  const [slidesarr,setslidesarr]=React.useState(1);
   const handle=()=>{
     if(slidesarr===slides.length){
       return;
