@@ -1,7 +1,7 @@
 import React, {Component, useState} from "react";
 import '../styles/App.css';
 import slides from '../data';
-import Slides from "./Slides";
+
 const App = () => {
   const [slidesarr,setslidesarr]=useState(1);
   const handle=()=>{
@@ -24,7 +24,20 @@ setslidesarr(copyslidesarr);
     }
   return (
     <>
-  <Slides slides={slides} handle1={handle1} h={h} handle={handle} move={slidesarr}/>
+    <h1 data-testid="title">
+  {slides[slidesarr-1].title}
+  </h1>
+<p data-testid="text">{
+slides[slidesarr-1].text}</p>
+<button 
+disabled={slidesarr!==1? true : false}
+data-testid="button-next" onClick={handle}></button>
+<button 
+disabled={slidesarr!==slides.length? true : false}
+data-testid="button-prev" onClick={handle1}></button>
+<button data-testid="button-restart" 
+disabled={slidesarr!==1? true : false}
+onClick={h}></button>
     </>
   )
 }
