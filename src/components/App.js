@@ -1,8 +1,9 @@
 import React, {Component, useState} from "react";
 import '../styles/App.css';
-import slides from '../data';
 
-const App = () => {
+
+const App = (props) => {
+  const {slides}=props;
   const [slidesarr,setslidesarr]=useState(1);
   const handle=()=>{
     if(slidesarr===slides.length){
