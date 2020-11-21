@@ -5,9 +5,9 @@ export default function   Slides(props){
   return (<>
 <div>{
 slides[move-1].text}</div>
-<button id="Next" onClick={handle}></button>
-<button id="Prev" onClick={handle1}></button>
-<button id="Rest" onClick={h}></button>
+<button id="button-next" onClick={handle}></button>
+<button id="button-prev" onClick={handle1}></button>
+<button id="button-restart" onClick={h}></button>
 </>)
 
 }
