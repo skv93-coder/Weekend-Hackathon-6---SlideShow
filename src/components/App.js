@@ -25,9 +25,7 @@ setslidesarr(copyslidesarr);
     }
   return (
     <>
-    <h1 data-testid="title">
-  {slides[slidesarr-1].title}
-  </h1>
+<h1 data-testid="title">{props.slides[slidesarr-1].title}</h1>
 <p data-testid="text">{
 slides[slidesarr-1].text}</p>
 <button 
